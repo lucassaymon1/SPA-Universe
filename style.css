@@ -1,0 +1,179 @@
+:root {
+  font-size: 62.5%;
+
+  --primary-color: white;
+  --secondary-color: #E1E1E6;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background-color: black;
+  background-size: cover;
+  color: var(--secondary-color);
+  display: grid;
+  transition: all ease 0.9s;
+  position: relative;
+  animation: page 0.9s 0.5s backwards;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  transition: all ease 0.9;
+}
+
+#app .page-exploration,
+#app .page-universe,
+#app .page-404,
+#app .page-home {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  animation: page 0.9s backwards;
+  display: grid;
+}
+
+.page-home,
+.page-404 {
+  background: url(/images/mountains-universe-1.png) no-repeat center fixed;
+}
+
+.page-universe {
+  background: url(/images/mountains-universe02.png) no-repeat center fixed;
+
+}
+
+.page-exploration {
+  background: url(/images/mountains-universe-3.png) no-repeat center fixed;
+}
+
+header {
+  margin: 4rem 7.2rem;
+  line-height: 2.1rem;
+  width: 40vw;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.4rem;
+  list-style: none;
+
+}
+
+li a {
+  transition: all ease 0.4s;
+  font-weight: 400;
+  transition: all ease 0.2s;
+}
+
+li a:hover {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+main {
+  margin: 19rem 10.2rem;
+  font-size: 1.8rem;
+  max-width: 64.8rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  color: var(--secondary-color);
+  line-height: 125%;
+  margin-bottom: 2.4rem;
+  width: clamp(38rem, 60vw + 2rem, 40rem);
+}
+
+.page-home main a {
+  background: none;
+  padding: 1.2rem 3.2rem;
+  color: var(--primary-color);
+
+  border: 1px solid var(--primary-color);
+  border-radius: .5rem;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 2.4rem;
+
+  cursor: pointer;
+  transition: background ease 0.3s, color ease 0.2s;
+}
+
+.page-home main a:hover {
+  color: hsla(194, 97%, 31%, 1);
+  background-color: var(--primary-color);
+}
+
+.page-home main,
+.page-home main h1 {
+  text-align: center;
+}
+
+.page-home main {
+  align-self: center;
+  justify-self: center;
+}
+
+.not-found img {
+  filter: contrast(1.5);
+
+}
+
+.not-found {
+  background-color: rgba(0, 0, 0, 0.308);
+
+  backdrop-filter: blur(4px);
+  padding: 3rem 0 0;
+  border-radius: 2.4rem;
+  margin: 6rem auto 0;
+
+  justify-self: center;
+  align-self: center;
+
+  text-align: center;
+  opacity: 0.9;
+  filter: saturate(1.5);
+  filter: contrast(1.1);
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: auto auto 1rem;
+  width: 50rem;
+}
+
+@keyframes page {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
